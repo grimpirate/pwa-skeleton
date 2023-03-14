@@ -1,0 +1,35 @@
+{
+	"id": "?pwa_uid=1",
+	"dir": "ltr",
+	"lang": "en",
+	"name": "Progressive Web Application",
+	"short_name": "PWA",
+	"description": "This is a Progressive Web Application.",
+	"categories": ["categoryone", "categorytwo", "etc"],
+	"start_url": "/",
+	"scope": "/",
+	"display_override": ["minimal-ui", "standalone", "fullscreen"],
+	"display": "browser",
+	"orientation": "any",
+	"theme_color": "#60c",
+	"background_color": "#000",
+	"icons": [
+		{
+			"src": "splash.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "maskable"
+		},
+		{
+			"src": "icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		}
+	]
+}
