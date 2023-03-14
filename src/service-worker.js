@@ -5,7 +5,7 @@ const prefetch = [
     '/index.html',
     '/script.js',
     '/style.css',
-    '/icon.svg'
+    '/custom-icon.js'
 ];
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
