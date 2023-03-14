@@ -1,2 +1,2 @@
 # pwa-skeleton
-A skeleton Progressive Web Application
+A minimal Progressive Web Application skeleton
