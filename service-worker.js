@@ -1,11 +1,11 @@
 const CACHE_VERSION = 0;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
-    '/',
-    '/index.html',
-    '/script.js',
-    '/style.css',
-    '/custom-icon.js'
+    '/pwa-skeleton/',
+    '/pwa-skeleton/index.html',
+    '/pwa-skeleton/script.js',
+    '/pwa-skeleton/style.css',
+    '/pwa-skeleton/custom-icon.js'
 ];
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
