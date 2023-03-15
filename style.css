@@ -29,12 +29,21 @@ custom-icon
 {
 	width: 80vmin;
 }
+#share,
 #install
 {
 	position: fixed;
 	width: 100%;
+}
+#share
+{
+	top: 1.5em;
+}
+#install
+{
 	bottom: 1.5em;
 }
+#share > button,
 #install > button
 {
 	display: flex;
@@ -48,16 +57,23 @@ custom-icon
 	color: #fff;
 	border: 0;
 }
+#share > button > svg,
+#share > button > span,
 #install > button > svg,
 #install > button > span
 {
 	width: 1em;
 }
+#share > button > svg > path,
 #install > button > svg > path
 {
 	fill: none;
 	stroke: #fff;
-	stroke-width: 2;
+	stroke-width: 1.5;
+}
+#share > button > svg > circle
+{
+	fill: #fff;
 }
 .hidden
 {

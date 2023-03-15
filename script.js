@@ -5,6 +5,14 @@
 		navigator.serviceWorker.register('service-worker.js');
 	}
 
+	document.querySelector('#share > button').addEventListener('click', async () => {
+		await navigator.share({
+			title: 'PWA',
+			text: 'Progressive Web Application',
+			url: 'https://grimpirate.github.io/pwa-skeleton/'
+		});
+	});
+
 	window.addEventListener('beforeinstallprompt', ev => {
 		ev.preventDefault();
 
