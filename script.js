@@ -14,9 +14,9 @@
 			ev.prompt();
 			await ev.userChoice;
 
-			install.classList('hidden').toggle();
+			install.classList.toggle('hidden');
 		}, {once: true});
 
-		install.classList('hidden').toggle();
+		install.classList.toggle('hidden');
 	}, {once: true});
 })();
