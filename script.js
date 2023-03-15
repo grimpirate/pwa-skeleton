@@ -5,16 +5,18 @@
 		navigator.serviceWorker.register('service-worker.js');
 	}
 
-	let deferredPromptEvent;
-
 	window.addEventListener('beforeinstallprompt', ev => {
 		ev.preventDefault();
-		deferredPromptEvent = ev;
-	});
 
-	document.querySelector('#install > button').addEventListener('click', async () => {
-		deferredPromptEvent.prompt();
-		await deferredPromptEvent.userChoice;
-		deferredPromptEvent = null;
-	});
+		const install = document.querySelector('#install');
+
+		install.querySelector('button').addEventListener('click', async () => {
+			ev.prompt();
+			await ev.userChoice;
+
+			install.classList('hidden').toggle();
+		}, {once: true});
+
+		install.classList('hidden').toggle();
+	}, {once: true});
 })();

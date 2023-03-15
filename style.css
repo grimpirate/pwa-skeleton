@@ -59,9 +59,7 @@ custom-icon
 	stroke: #fff;
 	stroke-width: 2;
 }
-@media all and (display-mode: standalone) {
-	#install
-	{
-		display: none;
-	}
+.hidden
+{
+	display: none;
 }
