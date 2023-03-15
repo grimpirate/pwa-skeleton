@@ -1,22 +1,18 @@
 html
 {
 	box-sizing: border-box;
+}
+*, *:before, *:after
+{
+	box-sizing: inherit;
+}
+body
+{
 	margin: 0;
 	padding: 0;
 	background-color: #000;
 	color: #fff;
 	font-family: sans-serif;
-}
-*, *:before, *:after
-{
-	box-sizing: inherit;
-	margin: inherit;
-	padding: inherit;
-	background-color: inherit;
-	color: inherit;
-}
-body
-{
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
@@ -44,13 +40,18 @@ custom-icon
 	display: flex;
 	align-items: center;
 	font-weight: bold;
-	width: 5.5em;
 	justify-content: space-between;
 	margin: 0 auto;
+	padding: 0.8em;
+	background-color: #60c;
+	border-radius: 0.5em;
+	color: #fff;
+	border: 0;
 }
-#install > button > svg
+#install > button > svg,
+#install > button > span
 {
-	height: 1em;
+	width: 1em;
 }
 #install > button > svg > path
 {
