@@ -18,6 +18,12 @@ class CustomIcon extends HTMLElement
 	--front: #fff;
 	--back:  #000;
 	--theme: #60c;
+	display: inline-block;
+}
+svg
+{
+	display: inline-block;
+	height: 100%;
 }
 path:not([fill])
 {

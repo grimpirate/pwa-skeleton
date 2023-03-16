@@ -17,14 +17,16 @@ body
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
+	flex-direction: column;
 }
 main
 {
 	flex: 1;
+	display: flex;
 }
 custom-icon
 {
-	width: 80vmin;
+	height: 100%;
 }
 button
 {
