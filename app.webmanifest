@@ -15,18 +15,18 @@
 	"background_color": "#000",
 	"icons": [
 		{
-			"src": "splash.png",
+			"src": "media/raster/splash.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
-			"src": "icon.svg",
+			"src": "media/vector/icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icon.svg",
+			"src": "media/vector/icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
 			"purpose": "any"
