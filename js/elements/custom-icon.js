@@ -24,6 +24,7 @@ svg
 {
 	display: inline-block;
 	height: 100%;
+	width: 100%;
 }
 path:not([fill])
 {
