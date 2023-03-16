@@ -20,16 +20,16 @@
 		<title>Progressive Web Application</title>
 	</head>
 	<body>
-		<div id="share" class="hidden">
-			<button>Share<span></span><svg viewbox="0 0 10 10" role="img" aria-hidden="true" focusable="false"><path d="M8 8L2 5L8 2" /><circle cx="8" cy="2" r="2" /><circle cx="2" cy="5" r="2" /><circle cx="8" cy="8" r="2" /></svg></button>
-		</div>
-		<div id="app">
+		<header>
+			<button class="hidden">Share<span></span><svg viewbox="0 0 10 10" role="img" aria-hidden="true" focusable="false"><path d="M8 8L2 5L8 2" /><circle cx="8" cy="2" r="2" /><circle cx="2" cy="5" r="2" /><circle cx="8" cy="8" r="2" /></svg></button>
+		</header>
+		<main>
 			<custom-icon></custom-icon>
-		</div>
-		<div id="install" class="hidden">
+		</main>
+		<footer>
 			<!-- https://web.dev/customize-install/ -->
-			<button>Install<span></span><svg viewbox="0 0 10 10" role="img" aria-hidden="true" focusable="false"><path d="M0 9H10M1 3L5 7L9 3M5 0V6" /></svg></button>
-		</div>
+			<button class="hidden">Install<span></span><svg viewbox="0 0 10 10" role="img" aria-hidden="true" focusable="false"><path d="M0 9H10M1 3L5 7L9 3M5 0V6" /></svg></button>
+		</footer>
 		<script src="js/script.js"></script>
 		<script src="js/elements/custom-icon.js"></script>
 	</body>

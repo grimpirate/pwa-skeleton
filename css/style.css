@@ -16,62 +16,41 @@ body
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-}
-#app
-{
-	width: 100%;
-	height: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+main
+{
+	flex: 1;
 }
 custom-icon
 {
 	width: 80vmin;
 }
-#share,
-#install
-{
-	position: fixed;
-	width: 100%;
-}
-#share
-{
-	top: 1.5em;
-}
-#install
-{
-	bottom: 1.5em;
-}
-#share > button,
-#install > button
+button
 {
 	display: flex;
 	align-items: center;
 	font-weight: bold;
 	justify-content: space-between;
-	margin: 0 auto;
+	margin: 1.5em auto;
 	padding: 0.8em;
 	background-color: #60c;
 	border-radius: 0.5em;
 	color: #fff;
 	border: 0;
 }
-#share > button > svg,
-#share > button > span,
-#install > button > svg,
-#install > button > span
+button > svg,
+button > span
 {
 	width: 1em;
 }
-#share > button > svg > path,
-#install > button > svg > path
+button > svg > path
 {
 	fill: none;
 	stroke: #fff;
 	stroke-width: 1.5;
 }
-#share > button > svg > circle
+button > svg > circle
 {
 	fill: #fff;
 }
