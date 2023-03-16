@@ -22,7 +22,7 @@ body
 main
 {
 	flex: 1;
-	display: flex;
+	text-align: center;
 }
 custom-icon
 {
