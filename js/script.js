@@ -13,9 +13,9 @@
 
 	if(navigator.canShare(shareData))
 	{
-		const share = document.querySelector('#share');
+		const share = document.querySelector('header > button');
 
-		document.querySelector('#share > button').addEventListener('click', async () => {
+		share.addEventListener('click', async () => {
 			await navigator.share(shareData);
 		});
 
@@ -25,9 +25,9 @@
 	window.addEventListener('beforeinstallprompt', ev => {
 		ev.preventDefault();
 
-		const install = document.querySelector('#install');
+		const install = document.querySelector('footer > button');
 
-		install.querySelector('button').addEventListener('click', async () => {
+		install.addEventListener('click', async () => {
 			ev.prompt();
 			await ev.userChoice;
 
