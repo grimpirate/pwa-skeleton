@@ -1,11 +1,12 @@
-const CACHE_VERSION = 34;
+const CACHE_VERSION = 35;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '/',
     '/index.html',
     '/js/script.js',
     '/css/style.css',
-    '/js/lib/mithril.min.js',
+    '/js/lib/react-dom.production.min.js',
+    '/js/lib/react.production.min.js',
     '/js/elements/custom-icon.js'
 ].map(f => `/pwa-skeleton${f}`);
 
