@@ -1,4 +1,4 @@
-const CACHE_VERSION = 27;
+const CACHE_VERSION = 28;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '/',
@@ -21,11 +21,14 @@ self.addEventListener(
         ).then(res => {
             if(res)
             {
+                console.info('CACHED');
                 console.log(res);
                 return res;
             }
             else
             {
+                console.info('FETCHED');
+                console.log(ev.request);
                 return fetch(ev.request);
             }
         })));
