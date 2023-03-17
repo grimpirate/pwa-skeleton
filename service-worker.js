@@ -1,4 +1,4 @@
-const CACHE_VERSION = 25;
+const CACHE_VERSION = 26;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '/',
@@ -6,7 +6,7 @@ const prefetch = [
     '/js/script.js',
     '/css/style.css',
     '/js/elements/custom-icon.js'
-].map(f => `/pwa-skeleton${f}`);
+];
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
 self.addEventListener('activate', ev => ev.waitUntil(caches.keys().then(cacheNames => cacheNames.map(cacheName => CURRENT_CACHE !== cacheName ? caches.delete(cacheName) : null))), {once: true});
