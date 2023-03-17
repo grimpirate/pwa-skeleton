@@ -7,23 +7,6 @@ import { createRoot, e, Fragment } from './import.js';
 		navigator.serviceWorker.register('service-worker.js');
 	}
 
-	let install = null;
-
-	window.addEventListener('beforeinstallprompt', ev => {
-		ev.preventDefault();
-
-		install = e('button', {onClick: async () => {
-			ev.prompt();
-			await ev.userChoice;
-		}},
-			'Install',
-			e('span'),
-			e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
-				e('path', {d: 'M0 9H10M1 3L5 7L9 3M5 0V6'})));
-
-		m.redraw();
-	}, {once: true});
-
 	const shareData = {
 		title: 'PWA',
 		text: 'Progressive Web Application',
@@ -32,6 +15,24 @@ import { createRoot, e, Fragment } from './import.js';
 
 	function App()
 	{
+		const [install, setInstall] = useState(null);
+
+		useEffect(() => {
+			if(null !== install) return;
+			window.addEventListener('beforeinstallprompt', ev => {
+				ev.preventDefault();
+
+				setInstall(e('button', {onClick: async () => {
+					ev.prompt();
+					await ev.userChoice;
+				}},
+					'Install',
+					e('span'),
+					e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
+						e('path', {d: 'M0 9H10M1 3L5 7L9 3M5 0V6'}))));
+			}, {once: true});
+		});
+
 		return e(Fragment, null,
 			e('header', null, install),
 			e('main', null, e('custom-icon')),
