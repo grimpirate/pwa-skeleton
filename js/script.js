@@ -32,11 +32,10 @@ import { createRoot, e, Fragment } from './import.js';
 
 	function App()
 	{
-		return e(Fragment,
-			e('header', install),
-			e('main',
-				e('custom-icon')),
-			e('footer',
+		return e(Fragment, null,
+			e('header', null, install),
+			e('main', null, e('custom-icon')),
+			e('footer', null,
 				navigator.canShare(shareData)
 				? e('button', {onClick: async() => {
 					await navigator.share(shareData);
@@ -51,5 +50,5 @@ import { createRoot, e, Fragment } from './import.js';
 				: null));
 	}
 
-	createRoot(document.body).render(e(App));
+	createRoot(document.querySelector('#app')).render(e(App));
 })();
