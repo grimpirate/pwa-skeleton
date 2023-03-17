@@ -1,6 +1,8 @@
-const CACHE_VERSION = 30;
+const CACHE_VERSION = 31;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
+    '/',
+    '/index.html',
     '/js/script.js',
     '/css/style.css',
     '/js/lib/mithril.min.js',
