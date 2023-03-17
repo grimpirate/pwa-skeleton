@@ -1,4 +1,4 @@
-const CACHE_VERSION = 26;
+const CACHE_VERSION = 27;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '/',
@@ -6,8 +6,26 @@ const prefetch = [
     '/js/script.js',
     '/css/style.css',
     '/js/elements/custom-icon.js'
-];
+].map(f => `/pwa-skeleton${f}`);
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
 self.addEventListener('activate', ev => ev.waitUntil(caches.keys().then(cacheNames => cacheNames.map(cacheName => CURRENT_CACHE !== cacheName ? caches.delete(cacheName) : null))), {once: true});
-self.addEventListener('fetch', ev => ev.respondWith(caches.match(ev.request, {ignoreSearch:true, cacheName: CURRENT_CACHE}).then(res => res || fetch(ev.request))));
+self.addEventListener(
+    'fetch',
+    ev => ev.respondWith(
+        caches.match(
+            ev.request, {
+                ignoreSearch:true,
+                cacheName: CURRENT_CACHE
+            }
+        ).then(res => {
+            if(res)
+            {
+                console.log(res);
+                return res;
+            }
+            else
+            {
+                return fetch(ev.request);
+            }
+        })));
