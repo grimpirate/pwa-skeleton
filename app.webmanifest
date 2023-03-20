@@ -7,7 +7,7 @@
 	"description": "This is a Progressive Web Application.",
 	"categories": ["categoryone", "categorytwo", "etc"],
 	"start_url": "https://grimpirate.github.io/pwa-skeleton/",
-	"scope": "https://grimpirate.github.io/pwa-skeleton/",
+	"scope": "/",
 	"display_override": ["minimal-ui", "standalone", "fullscreen"],
 	"display": "browser",
 	"orientation": "any",
