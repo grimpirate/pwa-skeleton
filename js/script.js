@@ -18,9 +18,9 @@ import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 		const [install, setInstall] = useState(false);
 
 		useEffect(() => {
+			console.log('useEffect instantiated');
 			if(false == install) return;
 			window.addEventListener('beforeinstallprompt', ev => {
-				console.log('install prompt');
 				ev.preventDefault();
 
 				setInstall(e('button', {onClick: async () => {
