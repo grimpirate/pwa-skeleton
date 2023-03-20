@@ -1,5 +1,5 @@
 {
-	"id": "?pwa_uid=1",
+	"id": "?pwa_uid=2",
 	"dir": "ltr",
 	"lang": "en",
 	"name": "Progressive Web Application",
@@ -13,22 +13,6 @@
 	"orientation": "any",
 	"theme_color": "#60c",
 	"background_color": "#000",
-	"shortcuts": [
-		{
-			"name": "Progressive Web Application",
-			"short_name": "PWA",
-			"description": "The main page of this application",
-			"url": "/",
-			"icons": [
-				{
-					"src": "media/vector/icon.svg",
-					"sizes": "any",
-					"type": "image/svg+xml",
-					"purpose": "any"
-				}
-			]
-		}
-	],
 	"icons": [
 		{
 			"src": "media/raster/splash.png",
