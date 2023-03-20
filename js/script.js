@@ -1,6 +1,17 @@
 import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 
 (()=>{
+	let installPrompt = () => {console.error('Not installable.')};
+
+	window.addEventListener('beforeinstallprompt', ev => {
+		ev.preventDefault();
+		
+		installPrompt = async () => {
+			ev.prompt();
+			await ev.userChoice;
+		};
+	}, {once: true});
+	
 	if('serviceWorker' in navigator)
 	{
 		navigator.serviceWorker.addEventListener('controllerchange', () => window.confirm("New version! OK to update?") ? window.location.reload(true) : null);
@@ -18,14 +29,7 @@ import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 		const [install, setInstall] = useState(()=>{});
 
 		useEffect(() => {
-			window.addEventListener('beforeinstallprompt', ev => {
-				ev.preventDefault();
-				
-				setInstall(async () => {
-					ev.prompt();
-					await ev.userChoice;
-				});
-			}, {once: true});
+			setInstall(installPrompt);
 		});
 
 		return e(Fragment, null,
