@@ -15,17 +15,17 @@ import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 
 	function App()
 	{
-		const [install, setInstall] = useState(()=>{console.error('Not installable.')});
+		const [install, setInstall] = useState();
 
 		useEffect(() => {
-			window.addEventListener('beforeinstallprompt', ev => {
+			/*window.addEventListener('beforeinstallprompt', ev => {
 				ev.preventDefault();
 				
 				setInstall(async () => {
 					ev.prompt();
 					await ev.userChoice;
 				});
-			}, {once: true});
+			}, {once: true});*/
 		});
 
 		return e(Fragment, null,
