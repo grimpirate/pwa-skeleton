@@ -18,20 +18,19 @@ import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 		const [install, setInstall] = useState(false);
 
 		useEffect(() => {
-			console.log('useEffect instantiated');
-			if(false == install) return;
-			window.addEventListener('beforeinstallprompt', ev => {
-				ev.preventDefault();
+			if(null === install)
+				window.addEventListener('beforeinstallprompt', ev => {
+					ev.preventDefault();
 
-				setInstall(e('button', {onClick: async () => {
-					ev.prompt();
-					await ev.userChoice;
-				}},
-					'Install',
-					e('span'),
-					e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
-						e('path', {d: 'M0 9H10M1 3L5 7L9 3M5 0V6'}))));
-			}, {once: true});
+					setInstall(e('button', {onClick: async () => {
+						ev.prompt();
+						await ev.userChoice;
+					}},
+						'Install',
+						e('span'),
+						e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
+							e('path', {d: 'M0 9H10M1 3L5 7L9 3M5 0V6'}))));
+				}, {once: true});
 		});
 
 		return e(Fragment, null,
