@@ -15,10 +15,10 @@ import { createRoot, e, Fragment, useEffect, useState } from './import.js';
 
 	function App()
 	{
-		const [install, setInstall] = useState(null);
+		const [install, setInstall] = useState(false);
 
 		useEffect(() => {
-			if(null !== install) return;
+			if(false == install) return;
 			window.addEventListener('beforeinstallprompt', ev => {
 				ev.preventDefault();
 
