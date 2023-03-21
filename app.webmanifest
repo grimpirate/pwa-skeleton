@@ -1,11 +1,11 @@
 {
-	"id": "?pwa_uid=2",
+	"id": "?pwa_uid=3",
 	"dir": "ltr",
 	"lang": "en",
 	"name": "Progressive Web Application",
 	"short_name": "PWA",
 	"description": "This is a Progressive Web Application.",
-	"categories": ["categoryone", "categorytwo", "etc"],
+	"categories": ["dev", "alpha"],
 	"start_url": "https://grimpirate.github.io/pwa-skeleton/",
 	"scope": "https://grimpirate.github.io/pwa-skeleton/",
 	"display_override": ["minimal-ui", "standalone", "fullscreen"],
