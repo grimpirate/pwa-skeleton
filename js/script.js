@@ -1,5 +1,5 @@
 import { createRoot, e } from './import.js';
-import { App } from './views/App.js';
+import App from './views/App.js';
 
 if('serviceWorker' in navigator)
 {

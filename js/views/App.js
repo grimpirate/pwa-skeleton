@@ -1,6 +1,6 @@
 import { e, Fragment } from '../import.js';
-import { Install } from '../components/Install.js';
-import { Share } from '../components/Share.js';
+import Install from '../components/Install.js';
+import Share from '../components/Share.js';
 
 export default function App()
 {
