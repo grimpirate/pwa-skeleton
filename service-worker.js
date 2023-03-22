@@ -1,4 +1,4 @@
-const CACHE_VERSION = 66;
+const CACHE_VERSION = 67;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '',
@@ -11,7 +11,7 @@ const prefetch = [
     'js/components/Install.js',
     'js/components/Share.js',
     'js/views/App.js'
-].map(f => `/${f}`);
+].map(f => `./${f}`);
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
 self.addEventListener('activate', ev => ev.waitUntil(caches.keys().then(cacheNames => cacheNames.map(cacheName => CURRENT_CACHE !== cacheName ? caches.delete(cacheName) : null))), {once: true});
