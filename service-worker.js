@@ -1,16 +1,17 @@
-const CACHE_VERSION = 69;
+const CACHE_VERSION = 70;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '',
     'index.html',
-    'js/script.js',
     'css/style.css',
+    'js/script.js',
     'js/lib/react-dom.production.min.js',
     'js/lib/react.production.min.js',
     'js/elements/custom-icon.js',
     'js/components/Install.js',
     'js/components/Share.js',
-    'js/views/App.js'
+    'js/views/App.js',
+    'media/vector/icon.svg'
 ].map(f => `./${f}`);
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
