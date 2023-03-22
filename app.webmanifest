@@ -1,5 +1,5 @@
 {
-	"id": "?pwa_uid=4",
+	"id": "?pwa_uid=5",
 	"dir": "ltr",
 	"lang": "en",
 	"name": "Progressive Web Application",
@@ -7,7 +7,6 @@
 	"description": "This is a Progressive Web Application.",
 	"categories": ["dev", "alpha"],
 	"start_url": "./index.html",
-	"scope": "/",
 	"display_override": ["minimal-ui", "standalone", "fullscreen"],
 	"display": "browser",
 	"orientation": "any",
