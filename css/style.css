@@ -25,7 +25,6 @@ body,
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 main,
 header,
@@ -43,10 +42,6 @@ footer
 main
 {
 	flex: 1;
-}
-custom-icon
-{
-	height: 100%;
 }
 button
 {
@@ -74,4 +69,18 @@ button > svg > path
 button > svg > circle
 {
 	fill: #fff;
+}
+@media (orientation: portrait)
+{
+	custom-icon
+	{
+		width: 100%;
+	}
+}
+@media (orientation: landscape)
+{
+	custom-icon
+	{
+		height: 100%;
+	}
 }
