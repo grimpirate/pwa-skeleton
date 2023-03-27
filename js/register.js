@@ -20,9 +20,9 @@ if('serviceWorker' in navigator)
 		registration.addEventListener('updatefound', () => {
 			console.log('updatefound');
 			if(registration.installing)
-				registration.addEventListener('statechange', () => {
+				registration.installing.addEventListener('statechange', () => {
 					console.log('state change');
-					if(registration.waiting)
+					if(registration.waiting && navigator.serviceWorker.controller)
 						invokeUpdate(registration.waiting);
 				});
 		});
