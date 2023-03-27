@@ -1,11 +1,10 @@
-const CACHE_VERSION = 89;
+const CACHE_VERSION = 90;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '',
     'index.html',
     'css/style.css',
     'js/import.js',
-    'js/register.js',
     'js/script.js',
     'js/lib/react-dom.production.min.js',
     'js/lib/react.production.min.js',
