@@ -3,8 +3,8 @@ if('serviceWorker' in navigator)
 	function invokeUpdate(registration)
 	{
 		console.log('invoked');
-		if(!registration) return;
-		window.confirm("New version! OK to update?") ? registration.postMessage('SKIP_WAITING') : null;
+		if(registration)
+			window.confirm("New version! OK to update?") ? registration.postMessage('SKIP_WAITING') : null;
 	}
 
 	navigator.serviceWorker.addEventListener('controllerchange', () => {
@@ -22,7 +22,7 @@ if('serviceWorker' in navigator)
 			if(registration.installing)
 				registration.installing.addEventListener('statechange', () => {
 					console.log('state change');
-					if(registration.waiting && navigator.serviceWorker.controller)
+					if(registration.waiting)
 						invokeUpdate(registration.waiting);
 				});
 		});
