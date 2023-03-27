@@ -9,6 +9,8 @@ if('serviceWorker' in navigator)
 		window.confirm("New version! OK to update?") ? registration.postMessage('SKIP_WAITING') : null;
 	}
 
+	navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload(true));
+
 	navigator.serviceWorker.register('./service-worker.js').then(registration => {
 		if(registration.waiting)
 			invokeUpdate(registration.waiting);
@@ -21,8 +23,6 @@ if('serviceWorker' in navigator)
 				});
 		});
 	});
-
-	navigator.serviceWorker.addEventListener('controllerchange', () => window.location.reload(true));
 }
 
 createRoot(document.querySelector('#app')).render(e(App));
