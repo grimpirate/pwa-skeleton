@@ -1,13 +1,13 @@
 {
-	"id": "?pwa_uid=6",
+	"id": "?pwa_uid=7",
 	"dir": "ltr",
 	"lang": "en",
 	"name": "Progressive Web Application",
 	"short_name": "PWA",
 	"description": "This is a Progressive Web Application.",
 	"categories": ["dev", "alpha"],
-	"start_url": "./index.html",
-	"scope": "./",
+	"start_url": "https://grimpirate.github.io/pwa-skeleton/",
+	"scope": "https://grimpirate.github.io/pwa-skeleton/",
 	"display_override": ["minimal-ui", "standalone", "fullscreen"],
 	"display": "browser",
 	"orientation": "any",
@@ -15,18 +15,18 @@
 	"background_color": "#000",
 	"icons": [
 		{
-			"src": "./media/raster/splash.png",
+			"src": "media/raster/splash.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
-			"src": "./media/vector/icon.svg",
+			"src": "media/vector/icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
 			"purpose": "maskable"
 		},
 		{
-			"src": "./media/vector/icon.svg",
+			"src": "media/vector/icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
 			"purpose": "any"
