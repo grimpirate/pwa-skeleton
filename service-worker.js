@@ -1,4 +1,4 @@
-const CACHE_VERSION = 111;
+const CACHE_VERSION = 112;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '',
@@ -16,5 +16,5 @@ const prefetch = [
 ].map(f => `/pwa-skeleton/${f}`);
 
 self.addEventListener('install', ev => ev.waitUntil(self.skipWaiting().then(() => caches.open(CURRENT_CACHE).then(cache => cache.addAll(prefetch)))), {once: true});
-self.addEventListener('activate', ev => ev.waitUntil(Promise.all(clients.matchAll({type: 'window'}).then(windowClient => windowClient.map(client => client.navigate(client.url))), caches.keys().then(cacheNames => Promise.all(cacheNames.filter(cacheName => CURRENT_CACHE !== cacheName).map(cacheName => caches.delete(cacheName)))))), {once: true});
+self.addEventListener('activate', ev => ev.waitUntil(caches.keys().then(cacheNames => Promise.all(cacheNames.filter(cacheName => CURRENT_CACHE !== cacheName).map(cacheName => caches.delete(cacheName))).then(() => clients.matchAll({type: 'window'}).then(windowClient => Promise.all(windowClient.map(client => client.navigate(client.url))))))), {once: true});
 self.addEventListener('fetch', ev => ev.respondWith(caches.match(ev.request, {ignoreSearch:true, cacheName: CURRENT_CACHE}).then(res => res || fetch(ev.request))));
