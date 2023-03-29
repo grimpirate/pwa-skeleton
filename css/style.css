@@ -22,7 +22,7 @@ body,
 }
 #app:before
 {
-	content: 'v101';
+	content: 'v102';
 	position: absolute;
 	bottom: 0;
 	left: 0;
