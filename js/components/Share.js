@@ -6,7 +6,7 @@ export default function Share()
 	const [data, setData] = useState({
 		title: 'PWA',
 		text: 'Progressive Web Application',
-		url: 'https://grimpirate.github.io/pwa-skeleton/'
+		url: 'http://grimpirate.github.io/pwa-skeleton/'
 	});
 
 	useEffect(() => {

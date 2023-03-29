@@ -16,13 +16,14 @@ body
 }
 html,
 body,
+#container,
 #app
 {
 	height: 100%;
 }
 #app:before
 {
-	content: 'v112';
+	content: 'v142';
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -53,7 +54,7 @@ main
 }
 button
 {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	font-weight: bold;
 	justify-content: space-between;
@@ -91,4 +92,12 @@ button > svg > circle
 	{
 		height: 100%;
 	}
+}
+dialog
+{
+	border: 0;
+	border-radius: 1rem;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
 }
