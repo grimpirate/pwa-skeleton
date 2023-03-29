@@ -20,6 +20,14 @@ body,
 {
 	height: 100%;
 }
+#app:before
+{
+	content: 'v99';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 0.7rem;
+}
 #app
 {
 	overflow: hidden;
@@ -42,13 +50,6 @@ footer
 main
 {
 	flex: 1;
-}
-aside
-{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	font-size: 0.5rem;
 }
 button
 {
