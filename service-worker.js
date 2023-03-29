@@ -1,4 +1,4 @@
-const CACHE_VERSION = 103;
+const CACHE_VERSION = 104;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
     '',
