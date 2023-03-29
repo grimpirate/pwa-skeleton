@@ -6,7 +6,7 @@ export default function App()
 {
 	return e(Fragment, null,
 		e('header', null, e(Install)),
-		e('aside', null, 'v95'),
+		e('aside', null, 'v96'),
 		e('main', null, e('custom-icon')),
 		e('footer', null, e(Share)));
 }
