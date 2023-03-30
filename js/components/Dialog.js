@@ -19,6 +19,5 @@ export default function Dialog()
 		e('p', null, 'New content available. Reload?'),
 		e('form', {method: 'dialog'},
 			e('button', {onClick: () => window.location.reload()}, 'Reload'),
-			' ',
 			e('button', null, 'Cancel')));
 }

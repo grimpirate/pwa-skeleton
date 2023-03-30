@@ -19,7 +19,6 @@ export default function Install()
 					await resolved.userChoice();
 				}},
 					'Install',
-					e('span'),
 					e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
 						e('path', {d: 'M0 9H10M1 3L5 7L9 3M5 0V6'}))));
 			});

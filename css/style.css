@@ -23,7 +23,7 @@ body,
 }
 #app:before
 {
-	content: 'v150';
+	content: 'v151';
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -64,9 +64,9 @@ button
 	color: #fff;
 	border: 0;
 	outline: 0;
+	gap: 1em;
 }
-button > svg,
-button > span
+button > svg
 {
 	width: 1em;
 }
@@ -101,4 +101,10 @@ dialog
 	background-color: #333;
 	color: #fff;
 	text-align: center;
+}
+dialog > form
+{
+	display: flex;
+	justify-content: center;
+	gap: 1em;
 }

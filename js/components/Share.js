@@ -15,7 +15,6 @@ export default function Share()
 				await navigator.share(data);
 			}},
 				'Share',
-				e('span'),
 				e('svg', {viewBox: '0 0 10 10', role: 'img', 'aria-hidden': 'true', focusable: 'false'},
 					e('path', {d: 'M8 8L2 5L8 2'}),
 					e('circle', {cx: 8, cy: 2, r: 2}),
