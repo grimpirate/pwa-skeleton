@@ -16,14 +16,14 @@ body
 }
 html,
 body,
-#container,
+#react,
 #app
 {
 	height: 100%;
 }
 #app:before
 {
-	content: 'v146';
+	content: 'v147';
 	position: absolute;
 	bottom: 0;
 	left: 0;
