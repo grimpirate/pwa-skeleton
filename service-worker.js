@@ -1,4 +1,4 @@
-const CACHE_VERSION = 147;
+const CACHE_VERSION = 148;
 const CURRENT_CACHE = `pwa-cache-v${CACHE_VERSION}`;
 const prefetch = [
 	'',
@@ -23,5 +23,5 @@ self.addEventListener('activate', ev => ev.waitUntil(
 	caches.keys().then(cacheNames => Promise.all(cacheNames.filter(cacheName => CURRENT_CACHE !== cacheName).map(cacheName => caches.delete(cacheName))))
 ), {once: true});
 self.addEventListener('fetch', ev => ev.respondWith(
-	caches.match(ev.request).then(res => res || fetch(ev.request))
+	caches.match(ev.request).then(res => res || fetch(ev.request, {cache: 'no-cache'}))
 ));
