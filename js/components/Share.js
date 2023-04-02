@@ -10,7 +10,7 @@ export default function Share()
 	});
 
 	useEffect(() => {
-		if(navigator.canShare(data))
+		if(!share && navigator.canShare(data))
 			setShare(e('button', {onClick: async () => {
 				await navigator.share(data);
 			}},
