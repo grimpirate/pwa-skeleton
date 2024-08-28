@@ -1,5 +1,5 @@
 {
-	"id": "?pwa_uid=8",
+	"id": "?pwa_uid=9",
 	"iarc_rating_id": "",
 	"dir": "ltr",
 	"lang": "en",
@@ -9,7 +9,9 @@
 	"categories": ["dev", "alpha"],
 	"start_url": "https://grimpirate.github.io/pwa-skeleton/",
 	"scope": "https://grimpirate.github.io/pwa-skeleton/",
-	"scope_extensions": [],
+	"scope_extensions": [
+		{"origin": "https://grimpirate.github.io/pwa-skeleton/"}
+	],
 	"display_override": ["minimal-ui", "standalone", "fullscreen", "window-controls-overlay"],
 	"display": "browser",
 	"prefer_related_applications": false,
